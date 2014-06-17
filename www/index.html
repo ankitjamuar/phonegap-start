@@ -27,13 +27,19 @@
     </head>
     <body>
         <h1>Test</h1>
-        <div class="app">
-            <h1>PhoneGap</h1>
-            
+           
         <script type="text/javascript" src="phonegap.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
             app.initialize();
+        </script>
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", function(){
+            document.addEventListener("deviceready",function(){
+            document.addEventListener("online", function(){alert("online")}, false);
+            document.addEventListener("offline", function(){alert("offline")}, false);
+    },false);
+}, false);
         </script>
     </body>
 </html>
