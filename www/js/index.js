@@ -45,5 +45,12 @@ var app = {
         receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
+
+        navigator.notification.alert(
+            'You are the winner!', // message
+            alertDismissed, // callback
+            'Game Over', // title
+            'Done' // buttonName
+        );
     }
 };
